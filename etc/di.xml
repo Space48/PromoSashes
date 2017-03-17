@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Space48_PromoSashes
+ *
+ * @category    Space48
+ * @package     Space48_PromoSashes
+ * @Date        03/2017
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * @author      @diazwatson
+ */-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Block\Product\Image">
+        <plugin name="Space48_PromoSashes::AddSash" type="Space48\PromoSashes\Plugin\Catalog\Product\Sash" sortOrder="100" disabled="false"/>
+    </type>
+    <type name="Magento\Catalog\Block\Product\View\Gallery">
+        <plugin name="Space48_PromoSashes::AddSash" type="Space48\PromoSashes\Plugin\Catalog\Product\View\Sash"/>
+    </type>
+    <type name="Magento\Catalog\Block\Product\ImageBuilder">
+        <plugin name="Space48_PromoSashes::AddProductToData" type="Space48\PromoSashes\Plugin\Catalog\Product\ImageBuilder"/>
+    </type>
+</config>
