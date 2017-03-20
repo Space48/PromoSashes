@@ -11,7 +11,6 @@
 namespace Space48\PromoSashes\Block;
 
 use Magento\Catalog\Model\Product;
-use Amasty\Label\Helper\Data;
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
 use Space48\PromoSashes\Model\Sash as Model;
@@ -28,7 +27,6 @@ class Sash extends Template
 
     public function __construct(
         Context $context,
-        Data $helper,
         Model $sash,
         array $data = []
     )
@@ -48,6 +46,5 @@ class Sash extends Template
 
         return $html;
     }
-
 }
 
