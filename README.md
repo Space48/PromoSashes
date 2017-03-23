@@ -1,5 +1,8 @@
 # PromoSashes
-Simple Magento2 extension to show promotional sashes on catalog product list page.
+Simple Magento2 extension to show promotional sashes (New) on catalog product list page.
+
+<img width="1266" alt="jackets_-_tops_-_women" src="https://cloud.githubusercontent.com/assets/1080386/24243493/4216d454-0fb3-11e7-9c7e-55784cca2721.png">
+
 
 ## Installation
 
@@ -25,4 +28,9 @@ From the terminal execute the following:
 
 ## How to use it
 
-TBD
+Once installed, go to the `Admin Penel -> Stores -> Configuration -> Space48 -> PromoSashes` and `enable` the extension.
+
+Then, choose a product and set `new from date` and `new to date` values.
+
+The sash will show during the specified period.
+
