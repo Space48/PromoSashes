@@ -18,7 +18,7 @@ From the terminal execute the following:
 
 then
 
-`composer require "space48/promosashes:dev-master"`
+`composer require "space48/promosashes:{module-version}"`
 
 **Using Modman:**
 
