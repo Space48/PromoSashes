@@ -14,7 +14,7 @@ To install this module copy the code from this repo to `app/code/Space48/PromoSa
 
 From the terminal execute the following:
 
-`composer config repositories.space48-quick-view vcs git@github.com:Space48/PromoSashes.git`
+`composer config repositories.space48-promosashes vcs git@github.com:Space48/PromoSashes.git`
 
 then
 
