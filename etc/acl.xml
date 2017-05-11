@@ -14,8 +14,8 @@
         <resources>
             <resource id="Magento_Backend::admin">
                 <resource id="Magento_Backend::stores">
-                    <resource id="Magento_Backed::stores_settings">
-                        <resource id="Magento_Backend::config">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
                             <resource id="Space48_PromoSashes::config" title="PromoSashes" sortOrder="50" />
                         </resource>
                     </resource>
