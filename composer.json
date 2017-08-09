@@ -7,6 +7,7 @@
     },
     "require-dev": {
     "magento/marketplace-eqp": "~1.0.5",
+    "magento-ecg/coding-standard": "2.*",
     "phpunit/phpunit": "4.1.0"
   },
     "type": "magento2-module",
