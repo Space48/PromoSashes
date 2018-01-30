@@ -9,7 +9,7 @@
  * @author      @diazwatson
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Space48\QuickView\Test\Integration;
 
@@ -19,8 +19,9 @@ use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\Component\ComponentRegistrar;
 use Magento\Framework\Module\ModuleList;
 use Magento\TestFramework\ObjectManager;
+use PHPUnit\Framework\TestCase;
 
-class ConfigModuleTest extends \PHPUnit_Framework_TestCase
+class ConfigModuleTest extends TestCase
 {
 
     protected $moduleName = 'Space48_PromoSashes';
@@ -35,27 +36,19 @@ class ConfigModuleTest extends \PHPUnit_Framework_TestCase
     public function testTheModuleIsConfiguredAndEnabledInTheTestEnvironment()
     {
         $objectManager = ObjectManager::getInstance();
-
         $moduleList = $objectManager->create(ModuleList::class);
 
         $this->assertTrue($moduleList->has($this->moduleName), 'Test is not enable in dev environment.');
-
     }
 
     public function testTheModuleIsConfiguredAndEnabledInTheRealEnvironment()
     {
         $objectManager = ObjectManager::getInstance();
-
         $dirList = $objectManager->create(DirectoryList::class, ['root' => BP]);
-
         $configReader = $objectManager->create(DeploymentReader::class, ['dirList' => $dirList]);
-
         $deploymentConfig = $objectManager->create(DeploymentConfig::class, ['reader' => $configReader]);
-
         $moduleList = $objectManager->create(ModuleList::class, ['config' => $deploymentConfig]);
 
         $this->assertTrue($moduleList->has($this->moduleName), 'Test is not enable in real environment.');
-
     }
-
 }

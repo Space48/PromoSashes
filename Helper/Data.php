@@ -30,14 +30,19 @@ class Data extends AbstractHelper
      */
     protected $_scopeConfig;
 
+    /**
+     * Data constructor.
+     * @param Context  $context
+     * @param DateTime $date
+     */
     public function __construct(
         Context $context,
         DateTime $date
     )
     {
-        parent::__construct($context);
         $this->_date = $date;
         $this->_scopeConfig = $context->getScopeConfig();
+        parent::__construct($context);
     }
 
     /**
@@ -58,4 +63,3 @@ class Data extends AbstractHelper
         return $this->_scopeConfig->getValue('space48_promosashes/' . $path);
     }
 }
-

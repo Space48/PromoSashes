@@ -10,7 +10,7 @@
  * @author      @diazwatson
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Space48\PromoSashes\Model;
 
@@ -31,7 +31,6 @@ class Sash extends AbstractModel
     /**
      * @var Data
      */
-
     protected $_helper;
 
     /**
@@ -42,7 +41,6 @@ class Sash extends AbstractModel
      * @param TimezoneInterface $dateTime
      * @param Data              $helper
      */
-
     public function __construct(
         Context $context,
         Registry $registry,
@@ -62,8 +60,16 @@ class Sash extends AbstractModel
      */
     public function isApplicable($product)
     {
-        $todayEndOfDayDate = $this->_localeDate->date()->setTime(23, 59, 59)->format('Y-m-d H:i:s');
-        $todayStartOfDayDate = $this->_localeDate->date()->setTime(0, 0, 0)->format('Y-m-d H:i:s');
+        $todayEndOfDayDate = $this->_localeDate->date()->setTime(
+            23,
+            59,
+            59
+        )
+            ->format('Y-m-d H:i:s');
+        $todayStartOfDayDate = $this->_localeDate->date()->setTime(
+            0,
+            0
+        )->format('Y-m-d H:i:s');
 
         $isApplicable = false;
 
@@ -73,9 +79,10 @@ class Sash extends AbstractModel
 
         if ($this->_helper->isEnabled()) {
 
-            if (!is_null($product->getData('news_from_date'))) {
+            /** @var \Magento\Catalog\Model\Product $product */
+            if (null !== $product->getData('news_from_date')) {
                 if ($product->getData('news_from_date') <= $todayStartOfDayDate) {
-                    if (!is_null($product->getData('news_to_date'))) {
+                    if (null !== $product->getData('news_to_date')) {
                         if ($product->getData('news_to_date') >= $todayEndOfDayDate) {
                             $isApplicable = true;
                         }
@@ -83,10 +90,6 @@ class Sash extends AbstractModel
                 }
             }
         }
-
         return $isApplicable;
     }
-
 }
-
-

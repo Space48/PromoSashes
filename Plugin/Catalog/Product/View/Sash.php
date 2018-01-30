@@ -8,7 +8,7 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  * @author      @diazwatson
  */
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Space48\PromoSashes\Plugin\Catalog\Product\View;
 
@@ -16,8 +16,8 @@ use Magento\Catalog\Block\Product\View\Gallery;
 use Space48\PromoSashes\Block\Sash as Block;
 use Space48\PromoSashes\Helper\Data;
 
-class Sash {
-
+class Sash
+{
     /**
      * @var Data
      */
@@ -42,14 +42,14 @@ class Sash {
      *
      * @return string
      */
-    public function afterToHtml(Gallery $subject, $result) {
+    public function afterToHtml(Gallery $subject, $result)
+    {
         $product = $subject->getProduct();
         $name = $subject->getNameInLayout();
-        if ($product && $name == "product.info.media.image") {
+        if ($product && $name === "product.info.media.image") {
             $result .= $this->_block->renderProductSash($product, 'product');
         }
 
         return $result;
     }
-
 }

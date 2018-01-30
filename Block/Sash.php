@@ -18,13 +18,17 @@ use Space48\PromoSashes\Model\Sash as Model;
 
 class Sash extends Template
 {
-
-
     /**
      * @var Model
      */
     private $_sash;
 
+    /**
+     * Sash constructor.
+     * @param Context $context
+     * @param Model   $sash
+     * @param array   $data
+     */
     public function __construct(
         Context $context,
         Model $sash,
@@ -36,14 +40,17 @@ class Sash extends Template
         $this->_sash = $sash;
     }
 
-
+    /**
+     * @param Product $product
+     * @param         $string
+     * @return string
+     */
     public function renderProductSash(Product $product, $string)
     {
         $html = '';
         if ($this->_sash->isApplicable($product)) {
             $html = $this->toHtml();
         }
-
         return $html;
     }
 }

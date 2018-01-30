@@ -9,7 +9,8 @@
  * @author      @diazwatson
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
+
 namespace Space48\PromoSashes\Plugin\Catalog\Product;
 
 use Closure;
@@ -20,6 +21,15 @@ use Magento\Framework\Registry;
 class ImageBuilder
 {
 
+    /**
+     * @var Registry
+     */
+    private $registry;
+
+    /**
+     * ImageBuilder constructor.
+     * @param Registry $registry
+     */
     public function __construct(
         Registry $registry
     )
@@ -46,6 +56,7 @@ class ImageBuilder
      * @param Product          $product
      *
      * @return CoreImageBuilder
+     * @throws \RuntimeException
      */
     public function aroundSetProduct(CoreImageBuilder $subject, Closure $proceed, Product $product)
     {
