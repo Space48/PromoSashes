@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2019-06-03
+
+### Changed
+
+- Added support for PHP 7.0-7.3
+- **BREAKING** PHP versions <7.0 are no longer supported
+- Added support for Magento 2.3
+- **BREAKING** Magento versions <2.3 are no longer supported due to changes in how Magento instantiates product image blocks
+
 ## [1.0.3] - 2018-01-21
 
 ### Changed

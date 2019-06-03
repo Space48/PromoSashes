@@ -1,31 +1,32 @@
 {
-    "name": "space48/promosashes",
-    "description": "N/A",
-    "require": {
-        "php": "~5.6|~7.0|~7.1",
-        "magento/framework": "^100.1.0| ^101.0.0"
-    },
-    "require-dev": {
+  "name": "space48/promosashes",
+  "description": "N/A",
+  "version": "2.0.0",
+  "require": {
+    "php": ">=7.0 <=7.3",
+    "magento/module-catalog": "^103.0.0"
+  },
+  "require-dev": {
     "magento/marketplace-eqp": "~1.0.5",
     "magento-ecg/coding-standard": "2.*",
     "phpunit/phpunit": "4.1.0"
   },
-    "type": "magento2-module",
-    "license": [
-        "proprietary"
-    ],
-      "repositories": {
+  "type": "magento2-module",
+  "license": [
+    "proprietary"
+  ],
+  "repositories": {
     "magento": {
       "type": "composer",
       "url": "https://repo.magento.com/"
     }
   },
-    "autoload": {
-        "files": [
-            "registration.php"
-        ],
-        "psr-4": {
-            "Space48\\PromoSashes\\": ""
-        }
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Space48\\PromoSashes\\": ""
     }
+  }
 }
