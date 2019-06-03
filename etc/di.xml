@@ -16,7 +16,7 @@
     <type name="Magento\Catalog\Block\Product\View\Gallery">
         <plugin name="Space48_PromoSashes::AddSash" type="Space48\PromoSashes\Plugin\Catalog\Product\View\Sash"/>
     </type>
-    <type name="Magento\Catalog\Block\Product\ImageBuilder">
-        <plugin name="Space48_PromoSashes::AddProductToData" type="Space48\PromoSashes\Plugin\Catalog\Product\ImageBuilder"/>
+    <type name="Magento\Catalog\Block\Product\ImageFactory">
+        <plugin name="Space48_PromoSashes::AddProductToImageBlock" type="Space48\PromoSashes\Plugin\Catalog\Product\ImageFactoryPlugin"/>
     </type>
 </config>
